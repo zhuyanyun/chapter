@@ -10,11 +10,7 @@ spring4 x实战代码
       
       
       
-      
-      
-      
-      
-      
+       
       
  遇到问题以及解决：
   1， git 403 问题
@@ -33,3 +29,10 @@ spring4 x实战代码
       url = https://git的用户名@github.com/git的用户名/项目名称
 
       第三步，git push -u origin master
+      
+      
+      
+      
+      
+      三，疑问：
+      springboot pom自己引入了maven插件,还需要idea中配置maven吗?
