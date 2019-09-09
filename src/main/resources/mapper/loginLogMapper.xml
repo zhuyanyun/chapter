@@ -7,15 +7,18 @@
         <result column="ip" property="ip" jdbcType="VARCHAR"/>
         <result column="login_datetime" property="loginDatetime" jdbcType="TIMESTAMP"/>
     </resultMap>
+
     <sql id="Base_Column_List">
-    login_log_id, user_id, ip, login_datetime
-  </sql>
-    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+      login_log_id, user_id, ip, login_datetime
+    </sql>
+
+    <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
         <include refid="Base_Column_List"/>
         from t_login_log
         where login_log_id = #{loginLogId,jdbcType=INTEGER}
     </select>
+
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_login_log
     where login_log_id = #{loginLogId,jdbcType=INTEGER}

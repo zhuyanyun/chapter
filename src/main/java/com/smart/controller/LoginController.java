@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-public class IndexController {
+public class LoginController {
 
     @RequestMapping("/")
     public String helle(){
         return "欢迎光临小春论坛";
     }
+
+
 }

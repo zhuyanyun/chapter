@@ -27,4 +27,6 @@ public interface UserDao {
     User findUserByUserName(String userName);
 
     int updateLoginInfo(User user);
+
+
 }
