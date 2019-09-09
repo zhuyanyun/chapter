@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+<generatorConfiguration>  
+<!-- ���ݿ�����-->  
+    <classPathEntry	location="/Users/mac/Desktop/NBT-DM/mybatis-generator-core-1.3.1/lib/mysql-connector-java-5.1.21.jar"/>
+    <context id="DB2Tables"  targetRuntime="MyBatis3">  
+        <commentGenerator>  
+            <property name="suppressDate" value="true"/>  
+            <!-- �Ƿ�ȥ���Զ����ɵ�ע�� true���� �� false:�� -->  
+            <property name="suppressAllComments" value="true"/>  
+        </commentGenerator>  
+        <!--���ݿ�����URL���û��������� -->  
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/sampledb" userId="root" password="123456">
+		</jdbcConnection>
+        <javaTypeResolver>  
+            <property name="forceBigDecimals" value="false"/>  
+        </javaTypeResolver>  
+        <!-- ����ģ�͵İ�����λ��-->  
+        <javaModelGenerator targetPackage="com.smart.entity" targetProject="/Users/mac/Desktop/exrcise/chapter/src/main/java/">
+            <property name="enableSubPackages" value="true"/>  
+            <property name="trimStrings" value="true"/>  
+        </javaModelGenerator>  
+        <!-- ����ӳ���ļ��İ�����λ��-->  
+        <sqlMapGenerator targetPackage="mapper" targetProject="/Users/mac/Desktop/exrcise/chapter/src/main/resources/">
+            <property name="enableSubPackages" value="true"/>  
+        </sqlMapGenerator>  
+        <!-- ����DAO�İ�����λ��-->  
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.smart.dao" targetProject="/Users/mac/Desktop/exrcise/chapter/src/main/java/">
+
+            <property name="enableSubPackages" value="true"/>  
+        </javaClientGenerator>  
+        <!-- Ҫ������Щ��-->  
+		<!-- --> 
+		<!-- -->
+	    <table tableName="t_user" domainObjectName="user" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+
+	   <table tableName="t_login_log" domainObjectName="loginLog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		
+   </context>  
+</generatorConfiguration> 
