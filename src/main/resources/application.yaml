@@ -7,9 +7,9 @@ server:
 #mysql
 spring:
     datasource:
-        url: jdbc:mysql://localhost:3306/local_demo
-        name: root
-        password: root
+        url: jdbc:mysql://127.0.0.1:3306/sampledb
+        username: root
+        password: 123456
         driverClassName: com.mysql.jdbc.Driver
 #        type: com.alibaba.druid.pool.DruidDataSource
 

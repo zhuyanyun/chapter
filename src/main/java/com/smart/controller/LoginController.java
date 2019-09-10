@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoginController {
 
-    @RequestMapping("/")
+    @RequestMapping("/start")
     public String helle(){
         return "欢迎光临小春论坛";
     }
