@@ -1,7 +1,5 @@
 package com.smart.controller;
 
-import com.smart.service.ReaderRepository;
-import com.smart.service.ReadingListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -9,6 +7,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+import com.smart.service.ReaderRepository;
 
 /**
  * @Description TODO
@@ -40,7 +40,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .userDetailsService(new UserDetailsService() {
                 @Override
                 public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-                    return readerRepository.findOne(username);
+//                    return readerRepository.findOne(username);
+                    return null;
                 }
             });
     }
