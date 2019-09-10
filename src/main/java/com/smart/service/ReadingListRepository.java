@@ -9,6 +9,4 @@ import com.smart.entity.Book;
 public interface ReadingListRepository extends JpaRepository<Book,Long> {
 
     List<Book> findByReader(String reader);
-
-    Book findOne(String username);
 }

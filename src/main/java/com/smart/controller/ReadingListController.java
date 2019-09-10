@@ -17,7 +17,7 @@ import java.util.List;
  */
 
 @Controller
-@RequestMapping("/read")
+@RequestMapping("/")
 public class ReadingListController {
 
     @Autowired
