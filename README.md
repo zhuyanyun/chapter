@@ -36,4 +36,4 @@ spring4 x实战代码
       
       三，疑问：
       springboot pom自己引入了maven插件,还需要idea中配置maven吗?
-      配置文件制定了file反而写入不了，chmoc 777 filename 也设置了
+      配置文件制定了file反而写入不了，chmoc 777 filename 也设置了，是需要设置应用程序有这个权限吗？
