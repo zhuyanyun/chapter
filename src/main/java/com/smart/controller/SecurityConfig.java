@@ -10,6 +10,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.smart.service.ReaderRepository;
 
+import java.util.Optional;
+
 /**
  * @Description TODO
  * @Author zhuyanyun
@@ -36,14 +38,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-            .userDetailsService(new UserDetailsService() {
+        auth.userDetailsService(new UserDetailsService() {
                 @Override
                 public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//                    return readerRepository.findOne(username);
-                    return null;
+                    return readerRepository.findOne(username);
                 }
             });
     }
+
+
 
 }

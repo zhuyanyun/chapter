@@ -3,6 +3,10 @@ server:
     tomcat:
         uri-encoding: UTF-8
     port: 9000
+#    ssl:
+#        key-store: file:///path/to/
+#        key-store-password: letmein
+#        key-password: letmein
 
 #mysql
 spring:
@@ -10,8 +14,23 @@ spring:
         url: jdbc:mysql://127.0.0.1:3306/sampledb
         username: root
         password: 123456
-        driverClassName: com.mysql.jdbc.Driver
-#        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+
+    main:
+        show-banner: false
+    thymeleaf:
+        cache: false
+
+
+#这样写并不好，启动完没有端口号，需要再了解
+logging:
+    path: /apps/logs/qq
+    file: book.log
+    level:
+        root: WARN
+        org.springframework.security: DEBUG
+
 
 
 ## Mybatis配置
@@ -36,3 +55,4 @@ mybatis:
 #mybatis:
 #    mapperLocations: classpath:mapper/**/*.xml
 #
+
